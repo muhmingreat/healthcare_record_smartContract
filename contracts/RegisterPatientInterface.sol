@@ -4,7 +4,7 @@ import { DataTypes } from "./shared/DataTypes.sol";
 import { Events } from "./shared/Events.sol";
 
 interface RegisterPatientInterface {
-    function registerPatient(string memory name, uint256 age, string memory gender) external;
+    function registerPatient(string memory name, uint256 age, string memory gender, string memory avatar) external;
     function getMyPatientProfile() external view returns (DataTypes.Patient memory);
     function getSinglePatient(uint256 patientId) external view returns (DataTypes.Patient memory);
     function getAllPatientsRecords() external view returns (DataTypes.Patient[] memory);

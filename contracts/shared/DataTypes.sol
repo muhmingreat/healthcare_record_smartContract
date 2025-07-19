@@ -7,6 +7,7 @@ library DataTypes {
         string name;
         uint256 age;
         string gender;
+        string avatar;
         address account;
         bool isDeleted;
     }
@@ -17,6 +18,8 @@ library DataTypes {
         string specialization;
         string licenseId;
         address account;
+        string biography;
+        string avatar;
         bool isDeleted;
     }
 
