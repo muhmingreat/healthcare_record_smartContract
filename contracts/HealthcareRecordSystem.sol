@@ -235,7 +235,7 @@ function getMedicalRecordsByDoctor(uint256 doctorId) external view returns (Data
     DataTypes.MedicalRecord[] memory result = new DataTypes.MedicalRecord[](count);
     uint256 index;
 
-    // Second pass: populate the result array
+    // Second pass populate the result array
     for (uint256 i = 0; i < records.length; i++) {
         if (records[i].doctorId == doctorId && !records[i].isDeleted) {
             result[index] = records[i];
