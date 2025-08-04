@@ -3,18 +3,15 @@ require("dotenv").config();
 /** @type import('hardhat/config').HardhatUserConfig */
 
 
-const { PRIVATE_KEY } = process.env;
+const { ALCHEMY_API_URL, CROSSFI_PRIVATE_KEY } = process.env;
 module.exports = {
-  defaultNetwork: "celoAlfajores",
+  defaultNetwork: "crossFi",
   networks: {
-    hardhat: {
-    },
-    celoAlfajores: {
-      url: 'https://alfajores-forno.celo-testnet.org',
-      // `https://celo-alfajores.infura.io/v3/${INFURA_API_KEY}` ,
-      // "https://alfajores-forno.celo-testnet.org",
-      accounts: [`0x${PRIVATE_KEY}`]
-    }
+   crossFi:{
+    url:"https://rpc.testnet.ms",
+      accounts:[`0x${CROSSFI_PRIVATE_KEY}`]
+    // url:`https://crossfi-testnet.g.alchemy.com/2/${ALCHEMY_API_URL}`,
+  },
   },
   solidity: {
     version: "0.8.24",
